@@ -1,0 +1,15 @@
+version: '3'
+services:
+ nextjs-docker:
+    image: nextjs-intern-test
+    container_name: nextjs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - CONTENTFUL_SPACE_ID=3inqipepzm4r
+      - CONTENTFUL_ACCESS_TOKEN=qKx1cIk79DPrpNKyYRj3qQqcmJ9WBNEtf0_Ji6HjSIw
+      - CONTENTFUL_PREVIEW_ACCESS_TOKEN=hqGD6vUcYHv4CI9Ax1Z68ihFhRGP7Mf50IaRPzrLAfQ
+      - CONTENTFUL_PREVIEW_SECRET=andika
+    ports:
+      - 3000:3000
